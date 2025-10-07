@@ -1,0 +1,58 @@
+# Build directories
+build/
+bin/
+lib/
+
+# IDE files
+.vscode/
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.sln
+
+# Compiled files
+*.exe
+*.obj
+*.o
+*.dll
+*.so
+*.dylib
+
+# Dataset (will be large)
+training/data/
+data/asl_images/
+data/asl_landmarks.csv
+data/*.npz
+*.csv
+*.zip
+
+# Model files (except the final trained model)
+training/checkpoints/
+training/logs/
+models/*.keras
+models/*.h5
+models/*.tflite
+models/*.pkl
+models/*.png
+data/*.png
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*~
