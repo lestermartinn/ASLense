@@ -43,6 +43,9 @@ __pycache__/
 .venv/
 venv/
 
+# Documentation (keep repo clean)
+*.md
+
 # OS generated files
 .DS_Store
 .DS_Store?
