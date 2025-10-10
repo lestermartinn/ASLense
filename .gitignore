@@ -24,15 +24,21 @@ data/
 *.csv
 *.zip
 
-# Model files (except the final trained model)
+# Model files - Keep the trained models but ignore intermediate files
 training/checkpoints/
 training/logs/
-models/*.keras
-models/*.h5
-models/*.tflite
-models/*.pkl
-models/*.png
-data/*.png
+models/best_model.keras
+models/training_history.png
+models/confusion_matrix.png
+models/confidence_distribution.png
+models/per_class_accuracy.png
+
+# Large dataset files
+data/*.npz
+data/*.csv
+data/asl_alphabet_train/
+data/asl_alphabet_test/
+*.zip
 
 # Python cache
 __pycache__/
@@ -41,8 +47,8 @@ __pycache__/
 .venv/
 venv/
 
-# Documentation (keep repo clean)
-*.md
+# Keep documentation - it's important!
+# *.md  <- REMOVED, we want to track docs
 
 # OS generated files
 .DS_Store
