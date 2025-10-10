@@ -20,9 +20,7 @@ lib/
 
 # Dataset (will be large)
 training/data/
-data/asl_images/
-data/asl_landmarks.csv
-data/*.npz
+data/
 *.csv
 *.zip
 

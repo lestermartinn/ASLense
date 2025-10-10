@@ -163,7 +163,7 @@ def process_dataset(dataset_path, output_csv):
 
 if __name__ == "__main__":
     # Configuration
-    DATASET_PATH = "data/asl_images"  # Change this to your dataset location
+    DATASET_PATH = "data/asl_alphabet_train/asl_alphabet_train"  # Kaggle dataset location
     OUTPUT_CSV = "data/asl_landmarks.csv"
     
     print("Configuration:")

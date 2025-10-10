@@ -159,13 +159,14 @@ quant_accuracy = np.mean(quant_predictions == y_test)
 print(f"  Quantized accuracy: {quant_accuracy*100:.2f}%")
 
 # Measure quantized inference time
-interpreter_quant.set_tensor(input_details_quant[0]['index'], sample)
+sample_float32 = sample.astype(np.float32)
+interpreter_quant.set_tensor(input_details_quant[0]['index'], sample_float32)
 interpreter_quant.invoke()  # Warmup
 
 quant_times = []
 for _ in range(100):
     start = time.time()
-    interpreter_quant.set_tensor(input_details_quant[0]['index'], sample)
+    interpreter_quant.set_tensor(input_details_quant[0]['index'], sample_float32)
     interpreter_quant.invoke()
     quant_times.append((time.time() - start) * 1000)
 
