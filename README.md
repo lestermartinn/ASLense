@@ -1,4 +1,4 @@
-# ASLense 🤟
+# ASLense 
 
 **Real-time American Sign Language recognition system powered by computer vision and machine learning.**
 
@@ -95,3 +95,4 @@ MIT License - see [LICENSE](LICENSE) file for details.
 ---
 
 **Created by Lester Martin** | [GitHub](https://github.com/lestermartinn/ASLense)
+
