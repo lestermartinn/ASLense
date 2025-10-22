@@ -2,6 +2,7 @@
 build/
 bin/
 lib/
+obj/
 
 # IDE files
 .vscode/
@@ -17,14 +18,16 @@ lib/
 *.dll
 *.so
 *.dylib
+*.a
 
-# Dataset (will be large)
-training/data/
-data/
-*.csv
+# Large dataset files - Don't commit the raw images
+data/asl_alphabet_train/
+data/asl_alphabet_test/
+data/*.npz
+data/*.csv
 *.zip
 
-# Model files - Keep the trained models but ignore intermediate files
+# Model training artifacts - Keep final models only
 training/checkpoints/
 training/logs/
 models/best_model.keras
@@ -33,22 +36,28 @@ models/confusion_matrix.png
 models/confidence_distribution.png
 models/per_class_accuracy.png
 
-# Large dataset files
-data/*.npz
-data/*.csv
-data/asl_alphabet_train/
-data/asl_alphabet_test/
-*.zip
-
 # Python cache
 __pycache__/
 *.pyc
 *.pyo
+*.pyd
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Virtual environment
 .venv/
 venv/
+env/
 
-# Keep documentation - it's important!
-# *.md  <- REMOVED, we want to track docs
+# Planning and development documentation (not for distribution)
+PHASE*.md
+*_PLAN.md
+*_STATUS.md
+*_COMPLETE.md
+*_QUICKSTART.md
+DATASET_SETUP.md
+VISUALIZER_GUIDE.md
+asl_project_brief.md
 
 # OS generated files
 .DS_Store
@@ -58,8 +67,24 @@ venv/
 .Trashes
 ehthumbs.db
 Thumbs.db
+desktop.ini
 
 # Temporary files
 *.tmp
 *.temp
 *~
+*.swp
+*.swo
+temp_*.txt
+test_frame.jpg
+synthetic_hand_test.jpg
+
+# Test and development files
+test_*.py
+test_*.cpp
+test_*.bat
+*_test.cpp
+*_test.py
+
+# Keep documentation - All .md files ARE tracked
+# (This comment is here to explicitly note we want markdown files)
