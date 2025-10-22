@@ -43,6 +43,10 @@ pip install -r python/requirements.txt
 
 2. **Run the interactive learning mode:**
 ```bash
+python -m venv .venv
+
+.venv\Scripts\Activate.ps1
+
 python python/interactive_learning.py
 ```
 Practice ASL letters with real-time feedback. The system shows you a target letter, and you make the sign. Hold it steady for 10 frames to advance.
@@ -95,4 +99,5 @@ MIT License - see [LICENSE](LICENSE) file for details.
 ---
 
 **Created by Lester Martin** | [GitHub](https://github.com/lestermartinn/ASLense)
+
 
